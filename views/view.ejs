@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Roots</title>
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Welcome to mapping world</h1>
+      <h5>See Your Roots</h5>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="endBtn">End</button>
+      <span id="status"></span>
+    </div>
+
+    <div class="mapBody">
+      <div id="map"></div>
+    </div>
+
+    <!-- Leaflet JS (load before your map.js) -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+
+    <!-- EJS variables (optional) -->
+    <script>
+      window.MAP_CENTER = <%- JSON.stringify(center) %>;
+      window.MAP_ZOOM   = <%- JSON.stringify(zoom) %>;
+    </script>
+
+    <!-- Your app JS -->
+    <script src="/js/map.js"></script>
+  </body>
+</html>
